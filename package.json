@@ -1,0 +1,32 @@
+{
+  "name": "jubjub-signature-pcd",
+  "version": "0.0.1",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "@pcd/pcd-types": "^0.3.0",
+    "@pcd/semaphore-identity-pcd": "^0.1.0",
+    "base64-js": "^1.5.1",
+    "blake-hash": "^2.0.0",
+    "buffer": "^6.0.3",
+    "json-bigint": "^1.0.0",
+    "maci-crypto": "^1.1.2",
+    "maci-domainobjs": "^1.1.2",
+    "poseidon-encryption": "^1.0.2",
+    "uuid": "^9.0.0"
+  },
+  "scripts": {
+    "lint": "eslint \"**/*.ts{,x}\"",
+    "build": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@pcd/eslint-config-custom": "^0.3.0",
+    "@pcd/tsconfig": "^0.3.0",
+    "@types/uuid": "^9.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.58.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -15,6 +15,7 @@ import {
      stringifyBigIntArray,
      unstringifyBigIntArray
 } from "../utils/bigint";
+import { JubJubSignatureCardBody } from "./CardBody";
 
 export const JubJubSignatureTypeName = "jubjub-signature-pcd";
 
@@ -173,12 +174,23 @@ export const deserialize = async (
      return JSONBig().parse(serialized);
 };
 
+export const getDisplayOptions = (pcd: JubJubSignaturePCD) => {
+     return {
+          header: "JubJub Signature",
+          displayName: 
+               "jubjub-sig-" +
+               pcd.claim.signature.R8[0].toString().slice(0, 5)
+     }
+}
+
 export const JubJubSignaturePCDPackage: PCDPackage<
      JubJubSignaturePCDClaim,
      JubJubSignaturePCDProof,
      JubJubSignaturePCDArgs
 > = {
      name: JubJubSignatureTypeName,
+     renderCardBody: JubJubSignatureCardBody,
+     getDisplayOptions,
      prove,
      verify,
      serialize,

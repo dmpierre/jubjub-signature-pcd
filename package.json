@@ -5,8 +5,10 @@
   "types": "./index.ts",
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "@pcd/pcd-types": "^0.3.0",
+    "@pcd/passport-ui": "^0.4.1",
+    "@pcd/pcd-types": "^0.4.1",
     "@pcd/semaphore-identity-pcd": "^0.1.0",
+    "@types/react": "^18.0.22",
     "base64-js": "^1.5.1",
     "blake-hash": "^2.0.0",
     "buffer": "^6.0.3",
@@ -14,6 +16,7 @@
     "maci-crypto": "^1.1.2",
     "maci-domainobjs": "^1.1.2",
     "poseidon-encryption": "^1.0.2",
+    "react": "^18.2.0",
     "uuid": "^9.0.0"
   },
   "scripts": {

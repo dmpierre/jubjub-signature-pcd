@@ -2,3 +2,4 @@ node_modules
 *.js
 *.d.ts
 *.ts.map
+yarn-error.log

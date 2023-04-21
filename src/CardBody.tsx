@@ -1,27 +1,12 @@
-import { FieldLabel, HiddenText, Separator } from "@pcd/passport-ui";
-import { JubJubSignaturePCD } from "jubjub-signature-pcd";
-import styled from "styled-components";
+import {JubJubSignaturePCD} from "./JubJubSignaturePCD";
+import React from 'react';
 
-export function JubJubSignatureCardBody({
-  pcd,
-}: {
-  pcd: JubJubSignaturePCD;
-}) {
-  console.log("PCD: ", pcd);   
+export function JubJubSignatureCardBody({pcd}: {pcd: JubJubSignaturePCD}) {
   return (
-    <Container>
-      <p>
-        This PCD represents a JubJub Signature.
-      </p>
-      <Separator />
-      <FieldLabel>Signature unique ID</FieldLabel>
-      <HiddenText text={pcd.id} />
-    </Container>
+      <div style={{padding: "16px", overflow: "hidden", width: "100%"}}>
+        <p> This PCD represents a JubJub Signature.</p>
+        <div>R8: {"[" + pcd.claim.signature.R8[0].substring(0, 5) + "..., " + pcd.claim.signature.R8[1].substring(0, 5) + "... ]"}</div>
+        <div>S: {pcd.claim.signature.S.substring(0, 5) + "..."} </div>
+      </div>
   );
 }
-
-const Container = styled.div`
-  padding: 16px;
-  overflow: hidden;
-  width: 100%;
-`;

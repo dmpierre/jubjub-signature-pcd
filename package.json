@@ -1,6 +1,6 @@
 {
   "name": "jubjub-signature-pcd",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "main": "./index.js",
   "types": "./index.ts",
   "license": "GPL-3.0-or-later",
